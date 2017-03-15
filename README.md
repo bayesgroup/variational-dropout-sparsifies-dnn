@@ -2,12 +2,9 @@
 
 The code for a paper on [Variational Dropout Sparsifies Deep Neural Networks](https://arxiv.org/abs/1701.05369). We showed that Variational Dropout leads to extremely sparse solutions both in fully-connected and convolutional layers. This effect is similar to automatic relevance determination effect, but prior distribution is fixed, so there is no additional overfiting risk. 
 
-<center>
-  <div>
-    <img src="http://ars-ashuha.ru/pdf/vdsdnn/conv.gif" align="middle"> 
-  </div>
-</center>
-
+<div style="text-align:center">
+<img src="http://ars-ashuha.ru/pdf/vdsdnn/conv.gif"/>
+</div>
 
 
 # Technical Details
