@@ -4,13 +4,13 @@ The code for a paper on [Variational Dropout Sparsifies Deep Neural Networks](ht
 
 We visualize weights of Sparse VS LeNet-5 network and demonstrate several filters of a convolutional layer and piece of a fully-connected layer.
 
-<div style="text-align:center">
+<p align="center">
 <img src="http://ars-ashuha.ru/pdf/vdsdnn/conv.gif"/>
-</div>
+</p>
 
-<div style="text-align:center">
+<p align="center">
 <img src="http://ars-ashuha.ru/pdf/vdsdnn/animated_fc.gif"/>
-</div>
+</p>
 
 
 
