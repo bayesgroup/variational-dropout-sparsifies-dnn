@@ -1,16 +1,13 @@
 # About
 
-Code for Variational Dropout Sparsifies Deep Neural Networks https://arxiv.org/abs/1701.05369
+The code for a paper on [Variational Dropout Sparsifies Deep Neural Networks](https://arxiv.org/abs/1701.05369). We showed that Variational Dropout leads to extremely sparse solutions both in fully-connected and convolutional layers. This effect is similar to automatic relevance determination effect, but prior distribution is fixed, so there is no additional overfiting risk. 
+![](conv.gif)
 
-# Environment setup
+# Technical Details
+
+## Environment setup
 
 ```(bash)
-#!/usr/bin/env bash
-
-export LC_ALL="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8"
-sudo dpkg-reconfigure locales
-
 sudo apt install virtualenv python-pip python-dev
 virtualenv venv --system-site-packages
 source venv/bin/activate
@@ -20,11 +17,9 @@ pip install --upgrade https://github.com/Theano/Theano/archive/master.zip
 pip install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 ```
 
-# Download Data
+## Download Data
 
 ```(bash)
-#!/bin/bash
-
 # Download MNIST dataset
 mkdir ./data/mnist
 curl -o ./data/mnist/train-images-idx3-ubyte.gz http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
@@ -43,14 +38,9 @@ curl -o ./data/cifar10/cifar-100-python.tar.gz https://www.cs.toronto.edu/~kriz/
 tar -xvzf ./data/cifar10/cifar-100-python.tar.gz -C ./data/cifar100/
 ```
 
-# Launch experiments 
+## Launch experiments 
 
 ```(bash)
-export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/home/ashuha/cuda/lib64:$LD_LIBRARY_PATH
-export CPATH=/home/ashuha/cuda/include:$CPATH
-export LIBRARY_PATH=/home/ashuha/cuda/lib64:$LD_LIBRARY_PATH 
-
 source ~/venv/bin/activate
-THEANO_FLAGS='floatX=float32,device=gpu0,lib.cnmem=1' ipython ./zexperiments/test.py 
+THEANO_FLAGS='floatX=float32,device=gpu0,lib.cnmem=1' ipython ./zexperiments/<experiment>.py
 ```
