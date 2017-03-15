@@ -4,7 +4,7 @@ The code for a paper on [Variational Dropout Sparsifies Deep Neural Networks](ht
 
 <center>
   <div>
-    <img src="conv.gif" align="middle"> 
+    <img src="http://ars-ashuha.ru/pdf/vdsdnn/conv.gif" align="middle"> 
   </div>
 </center>
 
