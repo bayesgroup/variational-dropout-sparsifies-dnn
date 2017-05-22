@@ -4,10 +4,11 @@ The code for ICML'17 paper on [Variational Dropout Sparsifies Deep Neural Networ
 We showed that Variational Dropout leads to extremely sparse solutions both in fully-connected and convolutional layers. 
 This effect is similar to automatic relevance determination effect, but prior distribution is fixed, so there is no additional overfitting risk. 
 
-We visualize weights of Sparse VD LeNet-5-Caffe network and demonstrate several filters of the first convolutional layer :) it looks cool, isn't it?
+We visualize weights of Sparse VD LeNet-5-Caffe network and demonstrate several filters of the first convolutional layer and the piece of a fully-connected layer:) it looks cool, isn't it?
 
 <p align="center">
-<img height="320" src="http://ars-ashuha.ru/pdf/vdsdnn/conv.gif"/>
+<img height="318" src="http://ars-ashuha.ru/pdf/vdsdnn/conv.gif"/>
+<img height="320" src="http://ars-ashuha.ru/pdf/vdsdnn/animated_fc.gif"/>
 </p>
 
 # Lasagne Setup 
