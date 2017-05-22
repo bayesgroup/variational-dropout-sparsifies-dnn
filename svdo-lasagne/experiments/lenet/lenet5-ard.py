@@ -2,12 +2,12 @@ from __future__ import print_function
 
 import sys
 import warnings
+from nets import objectives
 from theano import tensor as T
-from nets import objectives, optpolicy, layers
-from zexperiments.utils import run_experiment, save_net, build_params_from_init
+from nets import optpolicy, layers
 from lasagne import init, nonlinearities as nl, layers as ll
 from lasagne.layers.dnn import Pool2DDNNLayer as MaxPool2DLayer
-
+from zexperiments.utils import run_experiment, build_params_from_init
 
 warnings.simplefilter("ignore")
 
@@ -39,7 +39,6 @@ arch = net_lenet5
 net = run_experiment(
     dataset, 0, batch_size, arch, objectives.sgvlb, False,
     optpol, optpolicy.rw_linear, optimizer='adam')
-
 
 paramsv = build_params_from_init(net, iparam, lsinit=-10) if iparam else None
 

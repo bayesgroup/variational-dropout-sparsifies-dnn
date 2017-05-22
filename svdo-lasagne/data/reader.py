@@ -1,10 +1,13 @@
-import os
-import gzip
-import theano
-import numpy as np
 import cPickle as pickle
+import gzip
+import os
+
+import numpy as np
+import theano
 from scipy import linalg
 from theano import tensor as T
+
+from data.downloader import download_mnist, download_cifar10, download_cifar100
 
 
 class ZCA(object):
@@ -49,18 +52,18 @@ class ZCA(object):
 def load(dataset):
     if dataset == 'mnist':
         return load_mnist()
+    if dataset == 'mnist-random':
+        return load_mnist_random()
     if dataset == 'cifar10':
         return load_cifar10()
     if dataset == 'cifar10-random':
         return load_cifar10_random()
     if dataset == 'cifar100':
         return load_cifar100()
-    if dataset == 'imagenet':
-        return load_imagenet()
 
     raise Exception('Load of %s not implimented yet' % dataset)
 
-def load_mnist(base='./data/mnist'):
+def load_mnist():
     """
     load_mnist taken from https://github.com/Lasagne/Lasagne/blob/master/examples/images.py
     :param base: base path to images dataset
@@ -77,6 +80,11 @@ def load_mnist(base='./data/mnist'):
             data = np.frombuffer(f.read(), np.uint8, offset=8)
         return data
 
+    base = './data/mnist'
+
+    if not os.path.exists(base):
+        download_mnist()
+
     # We can now download and read the training and test set image and labels.
     X_train = load_mnist_images(base + '/train-images-idx3-ubyte.gz')
     y_train = load_mnist_labels(base + '/train-labels-idx1-ubyte.gz')
@@ -91,7 +99,13 @@ def load_mnist(base='./data/mnist'):
 
     return (X_train, y_train, X_test, y_test), X_train.shape[0], X_test.shape[0], (None, 1, 28, 28), 10
 
-def load_cifar10(base='./data/cifar10'):
+def load_mnist_random(base='./data/mnist'):
+    X_train, y_train, X_test, y_test = load_mnist(base)[0]
+    np.random.seed(74632)
+    y_train = np.random.choice(10, len(y_train))
+    return (X_train, y_train, X_test, y_test), X_train.shape[0], X_test.shape[0], (None, 1, 28, 28), 10
+
+def load_cifar10():
     def load_CIFAR_batch(filename):
         with open(filename, 'rb') as f:
             datadict = pickle.load(f)
@@ -111,6 +125,11 @@ def load_cifar10(base='./data/cifar10'):
         Xte, Yte = load_CIFAR_batch(os.path.join(ROOT, 'test_batch'))
         return Xtr, Ytr, Xte, Yte
 
+    base = './data/cifar10'
+    if not os.path.exists(base):
+        download_cifar10()
+
+
     # Load the raw CIFAR-10 data
     cifar10_dir = os.path.join(base, 'cifar-10-batches-py')
     X_train, y_train, X_test, y_test = load_CIFAR10(cifar10_dir)
@@ -125,6 +144,35 @@ def load_cifar10(base='./data/cifar10'):
     X_test = X_test.transpose(0, 3, 1, 2).copy()
 
     return (X_train, y_train, X_test, y_test), X_train.shape[0], X_test.shape[0], (None, 3, 32, 32), 10
+
+def load_cifar100():
+    def load_CIFAR_batch(filename, num):
+        """ load single batch of cifar """
+        with open(filename, 'rb') as f:
+            datadict = pickle.load(f)
+            X = datadict['data']
+            Y = datadict['coarse_labels']
+            X = X.reshape(num, 3, 32, 32).transpose(0, 2, 3, 1).astype("float")
+            Y = np.array(Y)
+            return X, Y
+
+    base = './data/cifar100/'
+    if not os.path.exists(base):
+        download_cifar100()
+
+    Xtr, Ytr = load_CIFAR_batch(os.path.join(base+'/cifar-100-python', 'train'), 50000)
+    Xte, Yte = load_CIFAR_batch(os.path.join(base+'/cifar-100-python', 'test'), 10000)
+
+    # Normalize the data: subtract the mean image
+    whitener = ZCA(x=Xtr)
+    Xtr = whitener.apply(Xtr)
+    Xte = whitener.apply(Xte)
+
+    # Transpose so that channels come first
+    Xtr = Xtr.transpose(0, 3, 1, 2).copy()
+    Xte = Xte.transpose(0, 3, 1, 2).copy()
+
+    return (Xtr, Ytr, Xte, Yte), X_train.shape[0], X_test.shape[0], (None, 3, 32, 32), 10
 
 def load_cifar10_random(base='./data/cifar10'):
     X_train, y_train, X_test, y_test = load_cifar10(base)[0]
@@ -156,3 +204,5 @@ def load_cifar100(base='./data/cifar100/cifar-100-python/'):
     Xte = Xte.transpose(0, 3, 1, 2).copy()
 
     return (Xtr, Ytr, Xte, Yte), Xtr.shape[0], Xte.shape[0], (None, 3, 32, 32), 100
+
+

@@ -1,12 +1,14 @@
 from __future__ import print_function
 
 import warnings
+from nets import objectives
 from theano import tensor as T
-from nets import objectives, optpolicy
-from zexperiments.utils import run_experiment
+from nets import optpolicy
 from lasagne import init, nonlinearities as nl, layers as ll
-from lasagne.layers.dnn import Conv2DDNNLayer as ConvLayer
+from zexperiments.utils import run_experiment
 from lasagne.layers.dnn import Pool2DDNNLayer as MaxPool2DLayer
+from lasagne.layers.dnn import Conv2DDNNLayer as ConvLayer
+
 
 warnings.simplefilter("ignore")
 

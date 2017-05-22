@@ -5,6 +5,7 @@ import sys
 import random
 import datetime
 import numpy as np
+
 from nets import utils
 from data import reader
 from lasagne import layers as ll
