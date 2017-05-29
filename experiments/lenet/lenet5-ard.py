@@ -7,7 +7,7 @@ from theano import tensor as T
 from nets import optpolicy, layers
 from lasagne import init, nonlinearities as nl, layers as ll
 from lasagne.layers.dnn import Pool2DDNNLayer as MaxPool2DLayer
-from zexperiments.utils import run_experiment, build_params_from_init
+from experiments.utils import run_experiment, build_params_from_init
 
 warnings.simplefilter("ignore")
 

@@ -6,7 +6,7 @@ from nets import objectives
 from theano import tensor as T
 from nets import optpolicy, layers
 from lasagne import init, nonlinearities as nl, layers as ll
-from zexperiments.utils import run_experiment
+from experiments.utils import run_experiment
 
 warnings.simplefilter("ignore")
 

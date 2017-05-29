@@ -58,10 +58,10 @@ def run_experiment(dataset, num_epochs, batch_size, arch, obj, verbose,
     if log_fname is None:
         log_fname = sys.argv[0].split('/')[-1][:-3]
 
-    if not os.path.exists('./zexperiments/logs'):
-        os.mkdir('./zexperiments/logs')
+    if not os.path.exists('./experiments/logs'):
+        os.mkdir('./experiments/logs')
 
-    base_fname = './zexperiments/logs/{fname}-{dataset}-%s.txt'
+    base_fname = './experiments/logs/{fname}-{dataset}-%s.txt'
     print = get_logging_print(base_fname.format(dataset=dataset, fname=log_fname))
     print(experiment_info(**locals()))
     print(utils.net_configuration(net, short=(not verbose)))
@@ -83,10 +83,10 @@ def save_net(net, dataset, k):
     fname = sys.argv[0].split('/')[-1][:-3]
     hash = ''.join([chr(random.randint(97, 122)) for _ in range(3)])
 
-    if not os.path.exists('./zexperiments/weights'):
-        os.mkdir('./zexperiments/weights')
+    if not os.path.exists('./experiments/weights'):
+        os.mkdir('./experiments/weights')
 
-    name = './zexperiments/weights/%s-%s-%s-%s' % (dataset, fname, k, hash)
+    name = './experiments/weights/%s-%s-%s-%s' % (dataset, fname, k, hash)
     print('save model: ' + name)
     np.save(name, params)
     return name + '.npy'
