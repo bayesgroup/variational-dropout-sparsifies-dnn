@@ -36,7 +36,6 @@ Comparison of different sparsity-inducing techniques (Pruning (Han et al., 2015b
 
 Accuracy and sparsity level for VGG-like architectures of different sizes. The number of neurons and filters scales as k. Dense networks were trained with Binary Dropout, and Sparse VD networks were trained with Sparse Variational Dropout on all layers. The overall sparsity level, achieved by our method, is reported as a dashed line. The accuracy drop is negligible in most cases, and the sparsity level is high, especially in larger networks.
 
-
 <p align="center">
 <img height="318" src="http://ars-ashuha.ru/pdf/vdsdnn/vgg.png"/>
 </p>
@@ -72,5 +71,4 @@ If you found this code useful please cite our paper
   journal={arXiv preprint arXiv:1701.05369},
   year={2017}
 }
-
 ```
