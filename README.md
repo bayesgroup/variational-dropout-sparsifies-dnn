@@ -13,6 +13,32 @@ We visualize weights of Sparse VD LeNet-5-Caffe network and demonstrate several 
 </p>
 
 
+## MNIST Experiments 
+
+Comparison of different sparsity-inducing techniques (Pruning (Han et al., 2015b;a), DNS (Guo et al., 2016), SWS (Ullrich et al., 2017)) on LeNet architectures. Our method provides the highest level of sparsity with a similar accuracy
+
+| Network       | Method   | Error | Sparsity per Layer  |  Compression |
+| -------------: | -------- | ----- | ------------------- | :--------------: |
+|               | Original | 1.64  |                     | 1              |
+|               | Pruning  | 1.59  | 92.0 − 91.0 − 74.0  | 12             |
+| LeNet-300-100 | DNS      | 1.99  | 98.2 − 98.2 − 94.5  | 56             |
+|               | SWS      | 1.94  |                     | 23             |
+| (ours)        | SparseVD | 1.92  | 98.9 − 97.2 − 62.0  | **68**         |
+||||||
+|               | Original | 0.8   |                     | 1              |
+|               | Pruning  | 0.77  | 34 − 88 − 92.0 − 81 | 12             |
+| LeNet-5       | DNS      | 0.91  | 86 − 97 − 99.3 − 96 | 111            |
+|               | SWH      | 0.97  |                     | 200            |
+| (ours)        | SparseVD | 0.75  | 67 − 98 − 99.8 − 95 | **280**        |
+
+
+# CIFAR Experiments
+
+Accuracy and sparsity level for VGG-like architectures of different sizes. The number of neurons and filters scales as k. Dense networks were trained with Binary Dropout, and Sparse VD networks were trained with Sparse Variational Dropout on all layers. The overall sparsity level, achieved by our method, is reported as a dashed line. The accuracy drop is negligible in most cases, and the sparsity level is high, especially in larger networks.
+
+
+
+
 # Environment setup
 
 ```(bash)
