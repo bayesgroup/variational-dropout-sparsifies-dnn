@@ -32,7 +32,7 @@ Comparison of different sparsity-inducing techniques (Pruning (Han et al., 2015b
 | (ours)        | SparseVD | 0.75  | 67 − 98 − 99.8 − 95 | **280**        |
 
 
-# CIFAR Experiments
+## CIFAR Experiments
 
 Accuracy and sparsity level for VGG-like architectures of different sizes. The number of neurons and filters scales as k. Dense networks were trained with Binary Dropout, and Sparse VD networks were trained with Sparse Variational Dropout on all layers. The overall sparsity level, achieved by our method, is reported as a dashed line. The accuracy drop is negligible in most cases, and the sparsity level is high, especially in larger networks.
 
