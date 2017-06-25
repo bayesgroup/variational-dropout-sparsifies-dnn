@@ -12,7 +12,7 @@ We visualize weights of Sparse VD LeNet-5-Caffe network and demonstrate several 
 </p>
 
 
-### Environment setup
+# Environment setup
 
 ```(bash)
 sudo apt install virtualenv python-pip python-dev
@@ -24,10 +24,24 @@ pip install --upgrade https://github.com/Theano/Theano/archive/master.zip
 pip install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 ```
 
-### Launch experiments 
+# Launch experiments 
 
 ```(bash)
 source ~/venv/bin/activate
 cd variational-dropout-sparsifies-dnn
 THEANO_FLAGS='floatX=float32,device=gpu0,lib.cnmem=1' ipython ./experiments/<experiment>.py
+```
+
+# Citation
+
+If you found this code useful please cite our paper
+
+```
+@article{molchanov2017vparsevd,
+  title={Variational Dropout Sparsifies Deep Neural Networks},
+  author={Molchanov, Dmitry and Ashukha, Arsenii and Vetrov, Dmitry},
+  journal={arXiv preprint arXiv:1701.05369},
+  year={2017}
+}
+
 ```
