@@ -1,6 +1,6 @@
 # Variational Dropout Sparsifies Deep Neural Networks
 
-The code for ICML'17 paper on [Variational Dropout Sparsifies Deep Neural Networks](https://arxiv.org/abs/1701.05369). 
+The code for ICML'17 paper on [Variational Dropout Sparsifies Deep Neural Networks](https://arxiv.org/abs/1701.05369) ([slides](https://goo.gl/GZk5FF)). 
 We showed that Variational Dropout leads to extremely sparse solutions both in fully-connected and convolutional layers. 
 The number of parameters was reduced up to 280 times on LeNet architectures and up to 68 times on VGG-like networks with a negligible decrease of accuracy. 
 This effect is similar to automatic relevance determination effect, but prior distribution is fixed, so there is no additional overfitting risk. 
