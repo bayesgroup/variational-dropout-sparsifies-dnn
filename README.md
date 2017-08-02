@@ -9,7 +9,7 @@ We visualize weights of Sparse VD LeNet-5-Caffe network and demonstrate several 
 
 <p align="center">
 <img height="318" src="http://ars-ashuha.ru/pdf/vdsdnn/conv.gif"/>
-<img height="320" src="http://ars-ashuha.ru/pdf/vdsdnn/animated_fc.gif"/>
+<img height="320" src="http://ars-ashuha.ru/pdf/vdsdnn/fc.gif"/>
 </p>
 
 
