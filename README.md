@@ -3,7 +3,7 @@
 This repo contains the code for our ICML17 paper, [Variational Dropout Sparsifies Deep Neural Networks](https://arxiv.org/abs/1701.05369) ([slides](https://goo.gl/GZk5FF), [poster](http://ars-ashuha.ru/pdf/vdsdnn/svdo-poster.pdf), [blog-post](https://research.yandex.com/news/yandex-at-icml-2017-variational-dropout-sparsifies-deep-neural-networks)). 
 We showed that Variational Dropout leads to extremely sparse solutions both in fully-connected and convolutional layers. 
 Sparse VD reduced the number of parameters up to 280 times on LeNet architectures and up to 68 times on VGG-like networks with a negligible decrease of accuracy. 
-This effect is similar to the Automatic Relevance Determination effect in empyrical Bayes.
+This effect is similar to the Automatic Relevance Determination effect in empirical Bayes.
 However, in Sparse VD the prior distribution remaines fixed, so there is no additional risk of overfitting.
 
 We visualize the weights of Sparse VD LeNet-5-Caffe network and demonstrate several filters of the first convolutional layer and a piece of the fully-connected layer :)
