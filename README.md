@@ -74,7 +74,7 @@ These two papers heavily rely on the Sparse Variational Dropout technique and ex
 
 # Citation
 
-If you found this code useful please cite our paper
+If you found this code useful please cite our paper 
 
 ```
 @article{molchanov2017variational,
