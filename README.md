@@ -1,6 +1,6 @@
 # Variational Dropout Sparsifies Deep Neural Networks
 
-This repo contains the code for our ICML17 paper, [Variational Dropout Sparsifies Deep Neural Networks](https://arxiv.org/abs/1701.05369) ([icml oral talk](https://vimeo.com/238221185), [slides](https://goo.gl/GZk5FF), [poster](http://ars-ashuha.ru/pdf/vdsdnn/svdo-poster.pdf), [blog-post](https://research.yandex.com/news/yandex-at-icml-2017-variational-dropout-sparsifies-deep-neural-networks)). 
+This repo contains the code for our ICML17 paper, [Variational Dropout Sparsifies Deep Neural Networks](https://arxiv.org/abs/1701.05369) ([talk](https://vimeo.com/238221185), [slides](https://goo.gl/GZk5FF), [poster](http://ars-ashuha.ru/pdf/vdsdnn/svdo-poster.pdf), [blog-post](https://research.yandex.com/news/yandex-at-icml-2017-variational-dropout-sparsifies-deep-neural-networks)). 
 We showed that Variational Dropout leads to extremely sparse solutions both in fully-connected and convolutional layers. 
 Sparse VD reduced the number of parameters up to 280 times on LeNet architectures and up to 68 times on VGG-like networks with a negligible decrease of accuracy. 
 This effect is similar to the Automatic Relevance Determination effect in empirical Bayes.
@@ -13,6 +13,9 @@ We visualize the weights of Sparse VD LeNet-5-Caffe network and demonstrate seve
 <img height="320" src="http://ars-ashuha.ru/pdf/vdsdnn/fc.gif"/>
 </p>
 
+## ICML 2017 Oral Presentation by Dmitry Molchanov
+
+[![ICML 2017 Oral Presentation by Dmitry Molchanov](http://ars-ashuha.ru/images/icml2017-oral.png)](https://vimeo.com/238221185)
 
 ## MNIST Experiments 
 
