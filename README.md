@@ -69,6 +69,8 @@ cd variational-dropout-sparsifies-dnn
 THEANO_FLAGS='floatX=float32,device=gpu0,lib.cnmem=1' ipython ./experiments/<experiment>.py
 ```
 
+PS: If you have CuDNN problem please look at this [issue](https://github.com/ars-ashuha/variational-dropout-sparsifies-dnn/issues/3).
+
 # Further extensions
 
 These two papers heavily rely on the Sparse Variational Dropout technique and extend it to other applications:
