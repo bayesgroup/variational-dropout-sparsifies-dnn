@@ -75,7 +75,7 @@ PS: If you have CuDNN problem please look at this [issue](https://github.com/ars
 
 These two papers heavily rely on the Sparse Variational Dropout technique and extend it to other applications:
 * [Structured Bayesian Pruning via Log-Normal Multiplicative Noise](https://arxiv.org/abs/1705.07283) provides a way to enforse _structured_ sparsity using a similar technique. This method allows to remove entire neurons and convolutional filters, which results in lighter architectures and a significant inference speed-up with standard deep learning frameworks.
-* [Bayesian Sparsification of Recurrent Neural Networks](https://arxiv.org/abs/1708.00077) adapts the Sparse Variational Dropout techniques for sparsification of various recurrent architectures. Authors report up to 200x compression of recurrent layers.
+* [Bayesian Sparsification of Recurrent Neural Networks](https://arxiv.org/abs/1810.10927) adapts the Sparse Variational Dropout techniques for sparsification of various recurrent architectures. Authors report up to 200x compression of recurrent layers.
 
 # Citation
 
