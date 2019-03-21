@@ -77,7 +77,7 @@ These two papers heavily rely on the Sparse Variational Dropout technique and ex
 * [Structured Bayesian Pruning via Log-Normal Multiplicative Noise](https://arxiv.org/abs/1705.07283) provides a way to enforse _structured_ sparsity using a similar technique. This method allows to remove entire neurons and convolutional filters, which results in lighter architectures and a significant inference speed-up with standard deep learning frameworks.
 * [Bayesian Compression for Natural Language Processing](https://arxiv.org/abs/1810.10927) adapts the Sparse Variational Dropout techniques for sparsification of various recurrent architectures. 
 
-**New:** Google AI Research recently has released [State of Sparsity in Deep Neural Networks](https://arxiv.org/abs/1902.09574) - a nice large scale study of sparcification methods. The code contains a nice implementation of [Sparse variational dropout on Tensorflow](https://github.com/google-research/google-research/blob/master/state_of_sparsity/layers/variational_dropout/nn.py#L585).
+**New:** Google AI Research recently has released [State of Sparsity in Deep Neural Networks](https://arxiv.org/abs/1902.09574) - a nice large scale study of sparsification methods. The code contains an implementation of [Sparse variational dropout on Tensorflow](https://github.com/google-research/google-research/blob/master/state_of_sparsity/layers/variational_dropout/nn.py#L585).
 
 # Citation
 
