@@ -1,5 +1,7 @@
 # Variational Dropout Sparsifies Deep Neural Networks
 
+**New:** Google AI Research recently has released [State of Sparsity in Deep Neural Networks](https://arxiv.org/abs/1902.09574) - a nice large scale study of sparsification methods. The code contains an implementation of [Sparse variational dropout on Tensorflow](https://github.com/google-research/google-research/blob/master/state_of_sparsity/layers/variational_dropout/nn.py#L585).
+
 This repo contains the code for our ICML17 paper, [Variational Dropout Sparsifies Deep Neural Networks](https://arxiv.org/abs/1701.05369) ([talk](https://vimeo.com/238221185), [slides](https://docs.google.com/presentation/d/1Lg86MnGbksn3AtehADxSG-FcrbT2DMmGmjHUqG-EQYw/edit?usp=sharing), [poster](http://ars-ashuha.ru/pdf/vdsdnn/svdo-poster.pdf), [blog-post](https://research.yandex.com/news/yandex-at-icml-2017-variational-dropout-sparsifies-deep-neural-networks)). 
 We showed that Variational Dropout leads to extremely sparse solutions both in fully-connected and convolutional layers. 
 Sparse VD reduced the number of parameters up to 280 times on LeNet architectures and up to 68 times on VGG-like networks with a negligible decrease of accuracy. 
@@ -76,8 +78,6 @@ PS: If you have CuDNN problem please look at this [issue](https://github.com/ars
 These two papers heavily rely on the Sparse Variational Dropout technique and extend it to other applications:
 * [Structured Bayesian Pruning via Log-Normal Multiplicative Noise](https://arxiv.org/abs/1705.07283) provides a way to enforse _structured_ sparsity using a similar technique. This method allows to remove entire neurons and convolutional filters, which results in lighter architectures and a significant inference speed-up with standard deep learning frameworks.
 * [Bayesian Compression for Natural Language Processing](https://arxiv.org/abs/1810.10927) adapts the Sparse Variational Dropout techniques for sparsification of various recurrent architectures. 
-
-**New:** Google AI Research recently has released [State of Sparsity in Deep Neural Networks](https://arxiv.org/abs/1902.09574) - a nice large scale study of sparsification methods. The code contains an implementation of [Sparse variational dropout on Tensorflow](https://github.com/google-research/google-research/blob/master/state_of_sparsity/layers/variational_dropout/nn.py#L585).
 
 # Citation
 
