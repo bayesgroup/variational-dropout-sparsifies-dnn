@@ -73,7 +73,8 @@ cd variational-dropout-sparsifies-dnn
 THEANO_FLAGS='floatX=float32,device=gpu0,lib.cnmem=1' ipython ./experiments/<experiment>.py
 ```
 
-PS: If you have CuDNN problem please look at this [issue](https://github.com/ars-ashuha/variational-dropout-sparsifies-dnn/issues/3).
+- If you have CuDNN problem please look at this [issue](https://github.com/ars-ashuha/variational-dropout-sparsifies-dnn/issues/3).
+- This [repo](https://github.com/nnnet/Variational-dropout-sparsifies-dnn) seems to use more up-to-date libs (Python 3.5 and Theano 1.0.0).
 
 # Further extensions
 
