@@ -1,8 +1,6 @@
 # Variational Dropout Sparsifies Deep Neural Networks
 
-**New:** 
-
-**New:** Google AI Research has released [State of Sparsity in Deep Neural Networks](https://arxiv.org/abs/1902.09574) - a nice large scale study of sparsification methods. The code contains an implementation of [Sparse variational dropout on Tensorflow](https://github.com/google-research/google-research/blob/master/state_of_sparsity/layers/variational_dropout/nn.py#L585).
+**Tensorflow implementation:** Google AI Research has released [State of Sparsity in Deep Neural Networks](https://arxiv.org/abs/1902.09574) - a nice large scale study of sparsification methods. The code contains an implementation of [Sparse variational dropout on Tensorflow](https://github.com/google-research/google-research/blob/master/state_of_sparsity/layers/variational_dropout/nn.py#L585).
 
 This repo contains the code for our ICML17 paper, [Variational Dropout Sparsifies Deep Neural Networks](https://arxiv.org/abs/1701.05369) ([talk](https://vimeo.com/238221185), [slides](https://docs.google.com/presentation/d/1Lg86MnGbksn3AtehADxSG-FcrbT2DMmGmjHUqG-EQYw/edit?usp=sharing), [poster](http://ars-ashuha.ru/pdf/vdsdnn/svdo-poster.pdf), [blog-post](https://research.yandex.com/news/yandex-at-icml-2017-variational-dropout-sparsifies-deep-neural-networks)). 
 We showed that Variational Dropout leads to extremely sparse solutions both in fully-connected and convolutional layers. 
