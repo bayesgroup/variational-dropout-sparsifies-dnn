@@ -11,13 +11,13 @@ However, in Sparse VD the prior distribution remaines fixed, so there is no addi
 We visualize the weights of Sparse VD LeNet-5-Caffe network and demonstrate several filters of the first convolutional layer and a piece of the fully-connected layer :)
 
 <p align="center">
-<img height="318" src="http://ars-ashuha.ru/pdf/vdsdnn/conv.gif"/>
-<img height="320" src="http://ars-ashuha.ru/pdf/vdsdnn/fc.gif"/>
+<img height="318" src="http://senya-ashukha.github.io/pdf/vdsdnn/conv.gif"/>
+<img height="320" src="http://senya-ashukha.github.io/pdf/vdsdnn/fc.gif"/>
 </p>
 
 ## ICML 2017 Oral Presentation by Dmitry Molchanov
 
-[![ICML 2017 Oral Presentation by Dmitry Molchanov](http://ars-ashuha.ru/images/icml2017-oral.png)](https://vimeo.com/238221185)
+[![ICML 2017 Oral Presentation by Dmitry Molchanov](http://senya-ashukha.github.io/images/icml2017-oral.png)](https://vimeo.com/238221185)
 
 ## MNIST Experiments 
 
@@ -48,7 +48,7 @@ The overall sparsity level, achieved by our method, is reported as a dashed line
 The accuracy drop is negligible in most cases, and the sparsity level is high, especially in larger networks.
 
 <p align="center">
-<img height="318" src="http://ars-ashuha.ru/pdf/vdsdnn/vgg.png"/>
+<img height="318" src="http://senya-ashukha.github.io/pdf/vdsdnn/vgg.png"/>
 </p>
 
 # Environment setup
