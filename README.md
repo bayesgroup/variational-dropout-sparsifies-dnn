@@ -86,7 +86,8 @@ These two papers heavily rely on the Sparse Variational Dropout technique and ex
 
 If you found this code useful please cite our paper
 ```
-@InProceedings{molchanov2017variational,
+@InProceedings{
+  molchanov2017variational,
   title={Variational Dropout Sparsifies Deep Neural Networks},
   author={Dmitry Molchanov and Arsenii Ashukha and Dmitry Vetrov},
   booktitle={Proceedings of the 34th International Conference on Machine Learning},
