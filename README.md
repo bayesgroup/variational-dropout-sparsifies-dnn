@@ -19,7 +19,7 @@ We visualize the weights of Sparse VD LeNet-5-Caffe network and demonstrate seve
 
 ## ICML 2017 Oral Presentation by Dmitry Molchanov
 
-[![ICML 2017 Oral Presentation by Dmitry Molchanov](http://senya-ashukha.github.io/images/icml2017-oral.png)](https://vimeo.com/238221185)
+[![ICML 2017 Oral Presentation by Dmitry Molchanov](http://senya-ashukha.github.io/projects/svdo_icml17/icml2017-oral.png)](https://vimeo.com/238221185)
 
 ## MNIST Experiments 
 
