@@ -5,7 +5,7 @@ Google AI Research has released [State of Sparsity in Deep Neural Networks](http
 
 ### Play around w/ SparseVD (PyTorch)
 You can play with compression of a small neural network using the following [IPython notebook @ Colab](https://colab.research.google.com/github/bayesgroup/deepbayes-2019/blob/master/seminars/day6/SparseVD-solution.ipynb), which is also available as an [assigment @ Colab](https://colab.research.google.com/github/bayesgroup/deepbayes-2019/blob/master/seminars/day6/SparseVD-assignment-colab.ipynb) from [DeepBayes](https://deepbayes.ru/) Summer School.
-The code is not highly tuned but is simple.
+The code is not highly tuned but it is simple.
 
 This repo contains the code for our ICML17 paper, [Variational Dropout Sparsifies Deep Neural Networks](https://arxiv.org/abs/1701.05369) ([talk](https://vimeo.com/238221185), [slides](https://docs.google.com/presentation/d/1Lg86MnGbksn3AtehADxSG-FcrbT2DMmGmjHUqG-EQYw/edit?usp=sharing), [poster](https://senya-ashukha.github.io/projects/svdo_icml17/svdo-poster-icml17.pdf), [blog-post](https://research.yandex.com/news/yandex-at-icml-2017-variational-dropout-sparsifies-deep-neural-networks)). 
 We showed that Variational Dropout leads to extremely sparse solutions both in fully-connected and convolutional layers. 
